@@ -1,0 +1,12 @@
+{
+  "name": "verifications-code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "alidayu-node": "^1.0.3",
+    "errs": "^0.3.2"
+  }
+}
