@@ -16,7 +16,7 @@ module.exports = function (appKey, appSecret, options) {
                     reject(errs.create({
                         code: 'SEND_VALID_CODE_FAILED',
                         status: 4008,
-                        statusCode: 4008e,
+                        statusCode: 4008,
                         message: 'send failed'
                     }));
                 } else {
