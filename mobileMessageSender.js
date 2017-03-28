@@ -4,7 +4,7 @@ const errs = require('errs');
 module.exports = function (appKey, appSecret, options) {
     this.sender = new PhoneMessageSender(appKey, appSecret);
 
-    this.send = function (code, mobile) {
+    this.send = function (par, mobile) {
         return new Promise((resolve, reject) => {
             this.sender.smsSend({
                 sms_free_sign_name: (options && options['sign']),
