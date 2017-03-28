@@ -8,7 +8,7 @@ module.exports = function (appKey, appSecret, options) {
         return new Promise((resolve, reject) => {
             this.sender.smsSend({
                 sms_free_sign_name: (options && options['sign']),
-                sms_param: {code: code},
+                sms_param: par,
                 rec_num: mobile,
                 sms_template_code: (options && options['template'])
             }, sendResult => {
