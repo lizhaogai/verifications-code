@@ -11,14 +11,10 @@ module.exports = function (appKey, appSecret, options) {
         rec_num: mobile,
         sms_template_code: (options && options['templates'][template])
       }, (result) => {
+        let r = true;
         if (result['error_response'])
-          throw  errs.create({
-            code: 'SEND_VERIFY_CODE_FAILED',
-            status: 401,
-            statusCode: 401,
-            message: 'send failed'
-          });
-        return resolve();
+          r = false;
+        return resolve(r);
       });
     });
   };
